@@ -8,7 +8,7 @@ const getForcast = async (city) => {
 const getCity = async (city) => {
     const data = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?access_token=pk.eyJ1IjoiY2Vkb21pcjg3IiwiYSI6ImNrOGxyNHRtZDA1cTMzaG5zYjJ0enBrbWsifQ.K7MLMbCB4uEXOKMcJ9tWKA&limit=1`)
     if(data.data.features.length === 0) {
-        return 'Place not found, please try a different one'
+        return {error: 'Place not found, please try a different one'}
     }
     return getForcast(data.data.features[0].text);
 }

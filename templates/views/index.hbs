@@ -9,8 +9,21 @@
 <body>
     {{>header}}
     <div class="container">
-        <div class="h1">Weather</div>
+        <div class="card text-white bg-info mb-3 mt-3">
+            <div class="card-header">Get your daily forcast here:</div>
+            <div class="card-body">
+                <h5 class="card-title mb-4">Enter your city below:</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="city" placeholder="City name..." id="city-name">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-light" type="button" id="submit-button">Submit</button>
+                    </div>
+                </div>
+                <div id="placeholder" class="alert alert-danger d-none" role="alert"></div>
+            </div>
+        </div>
     </div>
     {{>footer}}
+    <script src="./js/app.js"></script>
 </body>
 </html>
