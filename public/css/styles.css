@@ -1,0 +1,16 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    font-weight: 500;
+}
