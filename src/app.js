@@ -37,7 +37,9 @@ app.get('/help', (req, res) => {
 app.get('/weather', async (req, res) => {
     if(!req.query.address) {
         return res.send({
-            error: 'You must enter a valid address'
+            forcastData: {
+                error: 'You must enter a valid address'
+            }
         })
     }
     
