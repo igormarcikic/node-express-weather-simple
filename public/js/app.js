@@ -1,5 +1,5 @@
 const fetchWeather = async (city) => {
-    const res = await fetch(`http://localhost:3000/weather?address=${city}`);
+    const res = await fetch(`/weather?address=${city}`);
     const data = await res.json();
     if(data.forcastData.error) {
         placeholder.innerHTML = `

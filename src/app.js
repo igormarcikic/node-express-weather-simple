@@ -10,6 +10,8 @@ const partialsPath = path.join(__dirname, '../templates/partials');
 
 // Initialize express app
 const app = express();
+// Port for heroku
+const port = process.env.PORT || 3000;
 
 // App config - view engine to handlebars lib and set the default view folder
 app.set('view engine', 'hbs')
@@ -50,4 +52,6 @@ app.get('/weather', async (req, res) => {
 })
 
 // Start up the server on port 3000
-app.listen(3000);
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+});
