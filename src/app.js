@@ -49,6 +49,5 @@ app.get('/weather', async (req, res) => {
     })
 })
 
-
 // Start up the server on port 3000
 app.listen(3000);
