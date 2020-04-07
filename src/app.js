@@ -30,8 +30,8 @@ app.get('', (req,res)=>{
     });
 })
 
-app.get('/help', (req, res) => {
-    res.render('help', {
+app.get('/about', (req, res) => {
+    res.render('about', {
         name: 'Igor'
     })
 })
