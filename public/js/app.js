@@ -1,7 +1,6 @@
 const fetchWeather = async (city) => {
     const res = await fetch(`http://localhost:3000/weather?address=${city}`);
     const data = await res.json();
-    console.log(data.forcastData)
     if(data.forcastData.error) {
         placeholder.innerHTML = `
             ${data.forcastData.error}
@@ -9,7 +8,6 @@ const fetchWeather = async (city) => {
         placeholder.classList.add('alert-danger')
         placeholder.classList.remove('alert-info');
     } else {
-        console.log(data)
         placeholder.innerHTML = `
         <div class="card text-center">
             <div class="card-header">
